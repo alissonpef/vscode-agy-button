@@ -1,0 +1,70 @@
+{
+  "name": "agy-button",
+  "displayName": "Agy Button",
+  "description": "A button in the editor toolbar that opens the Antigravity (agy) panel, next to the Claude Code and Codex buttons.",
+  "version": "0.1.0",
+  "publisher": "alissonpef",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "agy",
+    "antigravity",
+    "button",
+    "ai",
+    "agent",
+    "shortcut"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alissonpef/vscode-agy-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alissonpef/vscode-agy-button/issues"
+  },
+  "homepage": "https://github.com/alissonpef/vscode-agy-button#readme",
+  "extensionDependencies": [
+    "google.google-antigravity"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "agyButton.open",
+        "title": "Open Agy Panel",
+        "category": "Agy Button",
+        "icon": {
+          "light": "media/agy-light.svg",
+          "dark": "media/agy-dark.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "agyButton.open",
+          "group": "navigation@-1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "check": "node --check extension.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.1"
+  }
+}

@@ -1,0 +1,10 @@
+# Dependencies and generated packages
+node_modules/
+*.vsix
+
+# Logs
+npm-debug.log*
+
+# OS and local editor files
+.DS_Store
+Thumbs.db
